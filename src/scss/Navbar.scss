@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+.wrapper {
+    .header {
+        z-index: 1;
+        background: #22242A;
+        position: fixed;
+        width: 100% - 0%;
+        height: 70px;
+        display: flex;
+        top: 0;
+    }
+
+    .header-menu {
+        width: 100% - 0%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        span {
+            color: #4CCEE8; 
+        }
+    }
+
+    .sidebar-btn{
+        color: #fff;
+        position: absolute;
+        margin-left: 300px;
+        font-size: 22px;
+        font-weight: 900;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+
+    .sidebar-btn:hover{
+        color: #4CCEE8;
+    }
+    
+    .header-menu {
+        ul{
+            display: flex;
+        }
+
+        li a {
+            background: #fff;
+            color: #000;
+            display: block;
+            margin: 0 10px;
+            font-size: 18px;
+            width: 34px;
+            height: 34px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            transition-property: background, color;
+        }
+    }
+
+    .header-menu ul li a:hover {
+        background: #4CCEE8;
+        color: #fff;
+    }
+
+    .sidebar {
+        z-index: 1;
+        background: #2F323A;
+        position: fixed;
+        top: 70px;
+        width: 250px;
+        height: calc(100% - 9%);
+        transition: 0.3s;
+        transition-property: width;
+        overflow-y: auto;
+
+
+        .sidebar-menu {
+            overflow: hidden;
+
+            .profile img {
+                margin: 20px 0;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+
+            .profile p {
+                color: #bbb;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .item {
+                width: 250px;
+                overflow: hidden;
+
+                .menu-btn {
+                    display: block;
+                    color: #fff;
+                    position: relative;
+                    padding: 25px 20px;
+                    transition: 0.3s;
+                    transition-property: color;
+
+                    .favicon {
+                        margin-right: 20px;
+                    }
+
+                    .drop-down {
+                        float: right;
+                        font-size: 12px;
+                        margin-top: 3px;
+                    }
+                }
+
+                .menu-btn:hover {
+                    color: #4CCEE8;
+                }
+
+                .sub-menu {
+                    background: #3498DB;
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: 0.3s;
+                    transition-property: background, max-height;
+
+                    a {
+                        display: block;
+                        position: relative;
+                        color: #fff;
+                        white-space: nowrap;
+                        font-size: 15px;
+                        padding: 20px;
+                        transition: 0.3s;
+                        transition-property: background;
+                    }
+
+                    a:hover {
+                        background: #55B1F0;
+                    }
+
+                    a:not(last-child) {
+                        border-bottom: 1px solid #8FC5E9;
+                    }
+
+                    i {
+                        padding-right: 20px;
+                        font-size: 10px;
+                    }
+                }
+
+            }
+            
+            .item:target {
+                .sub-menu {
+                    max-height: 1000px;
+                }
+            }
+        }
+    }
+
+}
+
+
+// .wrapper .main-container{
+//     width: (100% - 250px);
+//     margin-top: 70px;
+//     margin-left: 250px;
+//     padding: 15px;
+//     background: url(background.jpg)no-repeat;
+//     background-size: cover;
+//     height: 100vh;
+//     transition: 0.3s;
+//   }
