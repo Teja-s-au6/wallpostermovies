@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome, faList, faChevronDown, faGlobe, faTv, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faList, faChevronDown, faGlobe, faTv, faHeart } from '@fortawesome/free-solid-svg-icons';
 class NavBar extends Component {
     render() {
         return (
@@ -34,7 +34,7 @@ class NavBar extends Component {
                         </li>
                         <li className="item" id="imdb">
                             <a href="#imdb" className="menu-btn">
-                                <FontAwesomeIcon icon={['fab', 'imdb']} /><span>Top-IMDB</span>
+                               <span>Top-IMDB</span>
                             </a>
                         </li>
                         <li className="item" id="genre">
